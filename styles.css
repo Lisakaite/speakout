@@ -55,6 +55,7 @@ body {
 
 .you {
   position: relative;
+  
 }
 
 .you::before {
@@ -279,6 +280,48 @@ body {
   opacity: 0.5; /* reduce opacity to make placeholder less prominent */
  
 }
+/*footer area*/
+.footer{
+position: absolute;
+width: 316px;
+height: 23px;
+left: 500px;
+top: 500px;
+text-align: center;
+ }
+
+.sign{
+  font-family: gobold , sans-serif;
+  color: black;
+  font-size: 18px;
+}
+
+.footer p{
+  color: gray;
+  font-size: 16px;
+
+}
+
+@media (max-width: 600px) {
+  .sign {
+    font-size: 14px;
+  }
+  
+  .footer{
+    position: absolute;
+    width: 200px;
+    height: 10px;
+    left: 150px;
+    top: 390px;
+    text-align: center;
+  }
+  .footer p {
+    font-size: 13px;
+   
+  }
+}
+
+
 
 /* Media query for small screens */
 @media only screen and (max-width: 600px) {
