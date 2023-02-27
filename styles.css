@@ -181,6 +181,7 @@ body {
   color: #FF5D5D;
 }
 
+/*
 .google-btn-container {
   display: flex;
   flex-direction: row;
@@ -195,6 +196,7 @@ body {
   background: #000000;
 
   /* Inside auto layout */
+/*
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -213,12 +215,69 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-
-.google-logo {
-  width: 5px;
-  height: 5px;
+.google-icon {
+  width: 24px;
+  height: 24px;
   margin-right: 10px;
-  color: #ffffff;
+  color: #FFFFFF;
+}
+*/
+
+/*
+.signin button i {
+  font-size: 14px;
+  margin-right: 5px;
+}
+/*
+.signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}*/
+.signin button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 200px;
+  font-family: gobold, sans-serif;
+}
+.signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+
+.enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-transform: lowercase;
+  
+}
+
+.signin input[type="email"] {
+  width: 180px;
+  height: 20px;
+  border: 1px solid gray;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  color: black;
+  background-color: #f0f0f0;
+  line-height: 40px; /* set line-height to match input height */
+  text-align: center; /* center placeholder horizontally */
+  font-family: gobold, sans-serif;
+  
+}
+.signin input[type="email"]::placeholder {
+  color: gray;
+  opacity: 0.5; /* reduce opacity to make placeholder less prominent */
+ 
 }
 
 /* Media query for small screens */
@@ -235,10 +294,6 @@ body {
     font-size: 16px;
   }
 
-  .google-logo {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-  }
+
 }
 
