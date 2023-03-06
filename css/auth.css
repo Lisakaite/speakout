@@ -16,6 +16,7 @@
     line-height: 1.2;
     text-align: center;
     color: #000000;
+    
 }
 
 .heading span {
@@ -131,8 +132,8 @@
     position: absolute;
     width: 316px;
     height: 23px;
-    left: 500px;
-    top: 500px;
+    left: 480px;
+    top: 440px;
     text-align: center;
 }
 
