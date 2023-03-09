@@ -10,7 +10,7 @@ body {
 }
 
 .nav-link {
-  font-family: 'Gobold';
+  font-family: 'Gobold', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -29,16 +29,16 @@ body {
 }
 
 .heading {
-  font-family: 'Tahoma', sans-serif;
+  font-family: 'Gobold', sans-serif;
   font-weight: bold;
   font-size: 6vw;
-  line-height: 1.2;
+  line-height: 96px;
   text-align: center;
 }
 
 .kindergarten-font {
   font-family: 'Kindergarten', sans-serif;
-  font-size: 10vw;
+  font-size: 15vw;
   font-weight: bold;
 }
 
@@ -48,7 +48,7 @@ body {
     top: -8vw;
     left: -12vw;
     font-family: 'Kindergarten', sans-serif;
-    font-size: 10vw;
+    font-size: 15vw;
     font-weight: bold;
   }
 }
@@ -113,11 +113,16 @@ body {
   height: 50px;
   background-color: #FF5D5D;
   color: white;
-  font-weight: bold;
+  font-weight: 400;
+  font-family: 'Gobold', sans-serif;
+  font-style: normal;
 }
 .btn-content a{
+  font-weight: 400;
+  font-family: 'Gobold', sans-serif;
+  font-style: normal;
   text-decoration: none;
-  color: #000000;
+  color: #fff;
 }
 
 .btn-content:hover {
@@ -126,13 +131,13 @@ body {
 
 @media screen and (max-width: 768px) {
   .heading {
-    font-family: 'Gobold';
+    font-family: 'Gobold', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 4rem;
-    line-height: 1.2;
+    line-height: 64px;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: left;
   }
 
@@ -141,7 +146,7 @@ body {
     font-family: 'Kindergarten', sans-serif;
     font-size: 9rem;
     font-weight: bold;
-    line-height: 1.2;
+    line-height: 64px;
     text-align: left;
   }
 
@@ -150,11 +155,11 @@ body {
   }
 
   .subheading {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.2rem;
-    line-height: 1.2;
+    line-height: 19px;
     text-align: left;
     padding: 1rem;
   }
@@ -209,7 +214,7 @@ body {
   font-size: 14px;
   font-weight: bold;
   text-align: center;
-  font-family: 'Gobold';
+  font-family: 'Gobold', sans-serif;
 }
 /*
 @media screen and (min-width: 480px) {
