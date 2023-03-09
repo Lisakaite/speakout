@@ -170,7 +170,7 @@ body {
   }
 }
 
-/**container for grids*/
+/* *container for grids
 
 .containerforgrids {
   display: flex;
@@ -217,6 +217,17 @@ body {
   text-align: center;
   font-family: 'Gobold', sans-serif;
 }
+
+.image:hover img {
+  color: #fff;
+  background-color: #000000;
+}
+
+.caption:hover {
+  color: white;
+  background-color: #333;
+} */
+
 /*
 @media screen and (min-width: 480px) {
   .grid {
@@ -224,3 +235,44 @@ body {
   }
 }
 */
+
+.row {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 90px;
+
+}
+
+.video-record {
+  display: inline-block;
+  border: 4px solid #333;
+  background-color: #fff;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.video-record:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.video-record:hover i,
+.video-record:hover span {
+  color: #fff;
+}
+
+.video-record i {
+  display: block;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.video-record span {
+  display: block;
+}
