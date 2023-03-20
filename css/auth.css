@@ -125,8 +125,8 @@
     line-height: 40px;
     /* set line-height to match input height */
     text-align: center;
-    /* center placeholder horizontally */
-    font-family: 'Gobold', sans-serif;
+    /* center placeholder horizontally 
+    font-family: 'Gobold', sans-serif;*/
 
 }
 
@@ -158,6 +158,45 @@
     font-size: 16px;
 
 }
+/*styles for or
+.or{
+font-family: gobold, sans-serif;
+position: relative;
+
+}
+
+
+.line {
+height: 1px;
+width: 100%;
+position: relative;
+background-color: #d4d4d4;
+
+}
+*/
+.line{
+        height: 1px;
+        width: 15%;
+        position: relative;
+        background-color: #d4d4d4;
+        
+}
+
+.line::before{
+    content: 'OR';
+    font-family: gobold, sans-serif;
+    position: absolute;
+    top: 50%;
+    right: 22%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #232836;
+    padding: 0 15px;
+
+}
+
+
+
 
 @media (max-width: 600px) {
     .sign {
