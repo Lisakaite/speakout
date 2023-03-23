@@ -47,7 +47,6 @@ if (signup) {
     });
 }
 
-
 const login = document.getElementById('login');
 if (login) {
     login.addEventListener('click', (e) => {
@@ -94,14 +93,6 @@ if (googleSignInButton) {
                 const user = result.user;
 
                 // Save user data to Firestore
-                // const usersCollection = collection(db, 'users');
-                // const userDocRef = doc(usersCollection, user.uid);
-                // setDoc(userDocRef, {
-                //     name: user.displayName,
-                //     email: user.email,
-                //     photoURL: user.photoURL
-                // });
-
                 setDoc(doc(db, 'Users', user.uid), {
                     name: user.displayName,
                     email: user.email,
@@ -123,7 +114,6 @@ if (googleSignInButton) {
     });
 }
 
-
 // const googleSignInButton = document.getElementById('googlesignin');
 // if (googleSignInButton) {
 //     googleSignInButton.addEventListener('click', (e) => {
@@ -134,6 +124,14 @@ if (googleSignInButton) {
 //                 const token = credential.accessToken;
 //                 // The signed-in user info.
 //                 const user = result.user;
+
+//                 // Save user data to Firestore
+//                 setDoc(doc(db, 'Users', user.uid), {
+//                     name: user.displayName,
+//                     email: user.email,
+//                     photoURL: user.photoURL
+//                 });
+
 //                 // IdP data available using getAdditionalUserInfo(result)
 //                 // ...
 //             }).catch((error) => {
