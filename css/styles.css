@@ -8,6 +8,7 @@ body {
   line-height: 1.5;
   color: #000000;
 }
+
 .heading2 {
   font-family: 'Gobold', sans-serif;
   font-size: 6vw;
@@ -20,6 +21,7 @@ body {
 .heading2 span {
   color: #FF5D5D;
 }
+
 
 .nav-link {
   font-family: 'Gobold', sans-serif;
