@@ -33,17 +33,17 @@
 
   <div class="line"></div><br>
 
-  <!-- <form id="myForm">
-    <input type="text" name="firstname" id="firstname" placeholder="First Name" required><br>
-    <input type="text" name="lastname" id="lastname" placeholder="Last Name" required><br>
-    <button type="submit" class="button2" id="button2" onclick="submitForm()">NEXT</button>
-  </form> -->
+<form id="myForm">
+  <input type="text" name="firstname" id="firstname" placeholder="First Name" required><br>
+  <input type="text" name="lastname" id="lastname" placeholder="Last Name" required><br>
+  <button type="submit" class="button2" id="button2" onclick="submitForm(event)">NEXT</button>
+</form>
 
-  <div>
+  <!-- <div>
     <input type="email" name="email" id="email" placeholder="Enter Email" required><br>
     <input type="password" name="password" id="password" placeholder="Enter Password" required><br>
     <button type="submit" id="signup" class="button2" id="button2">SIGN UP</button>
-  </div>
+  </div> -->
 
 </div><br><br>
 
@@ -51,21 +51,24 @@
   <p>Already have an account <a href="login.html" class="sign">SIGN IN</a></p>
 </div>
 
-<script type="module" src="/js/backend/config.js"></script>
+<!-- <script type="module" src="/js/backend/config.js"></script> -->
 
-<!-- <script>
-  function submitForm() {
-    
-      var firstname = document.getElementById("firstname").value;
-      var lastname = document.getElementById("lastname").value;
 
-      localStorage.setItem("firstname", firstname);
-      localStorage.setItem("lastname", lastname);
 
-      window.location.href = 'twostepper.html';
+<script>
+  function submitForm(event) {
+    event.preventDefault(); // prevent default form submission behavior
 
-    }
-</script> -->
+    var firstname = document.getElementById("firstname").value;
+    var lastname = document.getElementById("lastname").value;
+
+    localStorage.setItem("firstname", firstname);
+    localStorage.setItem("lastname", lastname);
+
+    window.location = 'twostepper.html';
+  }
+</script>
+
 
 </body>
 </html>

@@ -20,13 +20,12 @@ const provider = new GoogleAuthProvider(app);
 const signup = document.getElementById('signup');
 if (signup) {
     signup.addEventListener('click', (e) => {
-        var firstname = ""
-        var lastname = ""
+        var firstname = document.getElementById('firstname').value;
+        var lastname = document.getElementById('lastname').value;
         var email = document.getElementById('email').value;
-        var photoURL = ""
+        // var photoURL = ""
         var password = document.getElementById('password').value;
 
-        
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
@@ -90,7 +89,7 @@ if (googleSignInButton) {
 // Call getRedirectResult before attaching click event listener
 getRedirectResult(auth)
     .then((result) => {
-        if (result.user) {
+        if (result && result.user) {
             // User is signed in, save user data to Firestore
             setDoc(doc(db, 'Users', result.user.uid), {
                 name: result.user.displayName,
@@ -102,7 +101,7 @@ getRedirectResult(auth)
                 last_login: new Date().toString()
             })
                 .then(() => {
-                    alert(result.user.displayName + " Login Successfull");
+                    alert("Login Successfull");
                     window.location = "http://127.0.0.1:5500/index.html"
                 })
                 .catch((error) => {
