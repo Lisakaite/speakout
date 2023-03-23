@@ -98,6 +98,11 @@
 
     
 }
+
+.button2 a {
+    text-decoration: none;
+    color: #ffffff;
+}
 .button3
 {
     margin-top: 20px;
