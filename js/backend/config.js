@@ -79,40 +79,42 @@ if (login) {
     });
 }
 
+// Attach click event listener to Google sign-in button
 const googleSignInButton = document.getElementById('googlesignin');
 if (googleSignInButton) { 
     googleSignInButton.addEventListener('click', (e) => {
         signInWithRedirect(auth, provider);
-        getRedirectResult(auth)
-            .then((result) => {
-                // This gives you a Google Access Token. You can use it to access Google APIs.
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
-
-                // The signed-in user info.
-                const user = result.user;
-
-                // Save user data to Firestore
-                setDoc(doc(db, 'Users', user.uid), {
-                    name: user.displayName,
-                    email: user.email,
-                    photoURL: user.photoURL
-                });
-
-                // IdP data available using getAdditionalUserInfo(result)
-                // ...
-            }).catch((error) => {
-                // Handle Errors here.
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // The email of the user's account used.
-                const email = error.customData.email;
-                // The AuthCredential type that was used.
-                const credential = GoogleAuthProvider.credentialFromError(error);
-                // ...
-            });
     });
 }
+
+// Call getRedirectResult before attaching click event listener
+getRedirectResult(auth)
+    .then((result) => {
+        if (result.user) {
+            // User is signed in, save user data to Firestore
+            setDoc(doc(db, 'Users', result.user.uid), {
+                name: result.user.displayName,
+                email: result.user.email,
+                photoURL: result.user.photoURL
+            });
+
+            updateDoc(doc(db, 'Users', result.user.uid), {
+                last_login: new Date().toString()
+            })
+                .then(() => {
+                    alert(result.user.displayName + " Login Successfull");
+                    window.location = "http://127.0.0.1:5500/index.html"
+                })
+                .catch((error) => {
+                    const errorMessage = error.message;
+                    alert(errorMessage);
+                });
+        }
+    })
+    .catch((error) => {
+        const errorMessage = error.message;
+        alert(errorMessage);
+    });
 
 // const googleSignInButton = document.getElementById('googlesignin');
 // if (googleSignInButton) {
