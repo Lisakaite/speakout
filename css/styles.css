@@ -64,6 +64,7 @@ body {
     font-family: 'Kindergarten', sans-serif;
     font-size: 15vw;
     font-weight: bold;
+    color: #FF5D5D;
   }
 }
 
@@ -109,11 +110,13 @@ body {
   background: #000000;
   border: none;
   cursor: pointer;
+  border-radius: 0;
 }
 
 .btn-nav:hover {
   background: #666666;
   color: white;
+  border-radius: 0;
 }
 
 .btn-content {
@@ -130,6 +133,7 @@ body {
   font-weight: 400;
   font-family: 'Gobold', sans-serif;
   font-style: normal;
+  border-radius: 0;
 }
 .btn-content a{
   font-weight: 400;
