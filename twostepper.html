@@ -32,14 +32,15 @@
 
   <div>
     <input type="email" name="email" id="email" placeholder="Enter Email" required><br>
-    <input type="password" name="password" id="password" placeholder="Enter Password" required><br>
+    <input type="password" name="password" id="password" placeholder="Enter password"><br>
+    <label for="showPassword"><input type="checkbox" id="showPassword"> Show Password</label><br>
     <button type="submit" id="signup" class="button2" id="button2">SIGN UP</button>
   </div>
 
 </div><br><br>
 
 <div class="footer">
-  <p>Already have an account <a href="login.html" class="sign">SIGN IN</a></p>
+  <p>Already have an account? <a href="login.html" class="sign">SIGN IN</a></p>
 </div>
 
 <input type="text" name="firstname" id="firstname" value="" placeholder="First Name" readonly hidden><br>
@@ -48,11 +49,26 @@
 <script type="module" src="/js/backend/config.js"></script>
 
 <script>
+
   var firstname = localStorage.getItem("firstname");
   var lastname = localStorage.getItem("lastname");
 
   document.getElementById("firstname").value = firstname;
   document.getElementById("lastname").value = lastname;
+
+</script>
+
+<script>
+  var passwordField = document.getElementById("password");
+  var showPasswordCheckbox = document.getElementById("showPassword");
+
+  showPasswordCheckbox.addEventListener('change', function () {
+    if (showPasswordCheckbox.checked) {
+      passwordField.type = "text";
+    } else {
+      passwordField.type = "password";
+    }
+  });
 </script>
 
 

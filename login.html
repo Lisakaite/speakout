@@ -28,30 +28,43 @@
   </button>
 </div>
 -->
-<div class="signin">
+  <div class="signin">
 
-  <button id="googlesignin">
-    <i class="fa fa-google"></i>
-    SIGN IN WITH GOOGLE
-  </button><br>
+    <button id="googlesignin">
+      <i class="fa fa-google"></i>
+      SIGN IN WITH GOOGLE
+    </button><br>
 
-  <div class="line"></div><br>
+    <div class="line"></div><br>
 
-  <div>
-    <input type="email" name="email" id="email" placeholder="Enter your email"><br>
-    <input type="password" name="password" id="password" placeholder="Enter password"><br>
-    <button type="submit" id="login" class="button2" id="button2">LOG IN</button>
-  </div>
+    <div>
+      <input type="email" name="email" id="email" placeholder="Enter your email"><br>
+      <input type="password" name="password" id="password" placeholder="Enter password"><br>
+      <label for="showPassword"><input type="checkbox" id="showPassword"> Show Password</label><br>
+      <button type="submit" id="login" class="button2" id="button2">LOG IN</button>
+    </div>
 
-</div><br><br>
+  </div><br><br>
 
   <div class="footer">
-    <p>Don't have an account <a href="jointhemovt.html" class="sign">SIGN UP</a></p>
+    <p>Don't have an account? <a href="jointhemovt.html" class="sign">SIGN UP</a></p>
   </div>
   <br>
 
-
   <script type="module" src="/js/backend/config.js"></script>
+
+  <script>
+    var passwordField = document.getElementById("password");
+    var showPasswordCheckbox = document.getElementById("showPassword");
+
+    showPasswordCheckbox.addEventListener('change', function () {
+      if (showPasswordCheckbox.checked) {
+        passwordField.type = "text";
+      } else {
+        passwordField.type = "password";
+      }
+    });
+  </script>
 
 </body>
 </html>
