@@ -358,11 +358,17 @@ body {
 }
 
 
-
-
-
 .col-md-3 span{
   font-family: 'Gobold', sans serif;
 }
 
 
+.navbar-nav .active {
+  background-color: black;
+
+}
+
+.navbar-nav .active a {
+  color: white;
+
+}
