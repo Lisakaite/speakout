@@ -8,6 +8,18 @@ body {
   line-height: 1.5;
   color: #000000;
 }
+.heading4aboutus {
+  font-family: 'Gobold', sans-serif;
+  font-size: 6vw;
+  line-height: 1.2;
+  text-align: center;
+  color: #000000;
+  
+}
+
+.heading4aboutus span {
+  color: #FF5D5D;
+}
 
 .heading2 {
   font-family: 'Gobold', sans-serif;
@@ -273,6 +285,10 @@ body {
   color: #333;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  border-radius: 0;
+  height: 200px;
+  width: 200px;
+
 }
 
 .report-button:hover {
@@ -330,3 +346,23 @@ body {
   font-family: 'Gobold', sans-serif;
   text-align: center;
 }
+.col-lg-4 p a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.contentcontainer
+{
+  width: 70%;
+  margin-left: 200px;
+}
+
+
+
+
+
+.col-md-3 span{
+  font-family: 'Gobold', sans serif;
+}
+
+
