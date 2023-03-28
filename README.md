@@ -1,2 +1,2 @@
-# speakup
+# speakout
 Solution challenge project
