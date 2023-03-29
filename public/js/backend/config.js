@@ -37,7 +37,7 @@ if (signup) {
                 })
                     .then(() => {
                         alert("User Created");
-                        window.location = "/index.html"
+                        window.location = "/login.html"
                         localStorage.clear();
                     })
                     .catch((error) => {
