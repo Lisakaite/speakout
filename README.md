@@ -34,7 +34,7 @@ Technologies
     9. Figma
 
 Contributors
-    1. KAITETSI LISA (Project Manager)
+    1. KAITESI LISA (Project Manager)
     2. LATIM RONNIE DAVID (Backend Developer)
     3. NANKYA FAIROUZ (Technical Writer)
     4. LUYIMA HAKIM(UI/UX Designer)
