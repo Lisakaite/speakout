@@ -32,6 +32,7 @@ Technologies
     7. Visual Studio Code
     8. GitHub
     9. Figma
+    10.Google Cloud Platform
     
  Future functionalities
     1. Create and share posts: Users can create and share posts on various topics, including social issues, politics, and current events.
