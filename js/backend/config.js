@@ -34,15 +34,23 @@ if (signup) {
                     name: firstname + " " + lastname,
                     email: email,
                     photoURL: photoURL
-                });
-
-                alert('User Created');
-                window.location = "/login.html"
+                })
+                    .then(() => {
+                        alert("Login Successfull");
+                        window.location = "/index.html"
+                        localStorage.clear();
+                    })
+                    .catch((error) => {
+                        const errorMessage = error.message;
+                        alert(errorMessage);
+                        localStorage.clear();
+                    });
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 alert(errorMessage);
+                localStorage.clear();
             });
     });
 }
