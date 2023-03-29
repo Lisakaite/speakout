@@ -36,7 +36,7 @@ if (signup) {
                     photoURL: photoURL
                 })
                     .then(() => {
-                        alert("Login Successfull");
+                        alert("User Created");
                         window.location = "/index.html"
                         localStorage.clear();
                     })
