@@ -23,7 +23,7 @@ if (signup) {
         var firstname = document.getElementById('firstname').value;
         var lastname = document.getElementById('lastname').value;
         var email = document.getElementById('email').value;
-        // var photoURL = ""
+        var photoURL = ""
         var password = document.getElementById('password').value;
 
         createUserWithEmailAndPassword(auth, email, password)
