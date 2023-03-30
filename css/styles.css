@@ -358,6 +358,16 @@ body {
 }
 
 
+
+@media only screen and (max-width: 768px) {
+  .contentcontainer {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
 .col-md-3 span{
   font-family: 'Gobold', sans serif;
 }

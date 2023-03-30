@@ -269,32 +269,12 @@ background-color: #d4d4d4;
 
 
 
-@media (max-width: 600px) {
-    .sign {
-        font-size: 14px;
-    }
-
-    .footer {
-        position: absolute;
-        width: 200px;
-        height: 10px;
-        left: 150px;
-        top: 390px;
-        text-align: center;
-    }
-
-    .footer p {
-        font-size: 13px;
-
-    }
-}
-
 
 
 /* Media query for small screens */
 @media only screen and (max-width: 600px) {
     .heading {
-        font-size: 24px;
+        font-size: 35px;
     }
 
     .google-btn-container {
@@ -307,3 +287,46 @@ background-color: #d4d4d4;
 
 
 }
+@media screen and (max-width: 600px) {
+    .form-container {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .sign {
+        font-size: 14px;
+                
+    }
+
+    .footer {
+        position: absolute;
+        width: 200px;
+        height: 10px;
+        left: 150px;
+        top: 500px;
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 15px;
+
+    }
+}
+/*
+@media only screen and (max-width: 1024px) {
+    .heading {
+        font-size: 60px;
+    }
+
+    .google-btn-container {
+        margin: 10px;
+    }
+
+    .google-btn {
+        font-size: 20px;
+    }
+
+
+}*/
