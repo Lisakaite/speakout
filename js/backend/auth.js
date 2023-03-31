@@ -60,7 +60,7 @@ if (login) {
                 })
                     .then(() => {
                         alert("Login Successfull");
-                        window.location = "/index.html"
+                        window.location = "/indexauthed.html"
                     })
                     .catch((error) => {
                         const errorMessage = error.message;
@@ -100,7 +100,7 @@ getRedirectResult(auth)
             })
                 .then(() => {
                     alert("Login Successfull");
-                    window.location = "/index.html"
+                    window.location = "/indexauthed.html"
                 })
                 .catch((error) => {
                     const errorMessage = error.message;
@@ -148,13 +148,24 @@ getRedirectResult(auth)
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
+        // User is signed in
         const uid = user.uid;
-        // ...
+        const allowedUrls = ['/indexauthed.html', '/category.html', '/reportnow.html'];
+        const currentUrl = window.location.pathname;
+
+        if (!allowedUrls.includes(currentUrl)) {
+            // Redirect to authed page if not already there
+            window.location = "/indexauthed.html";
+        }
     } else {
         // User is signed out
-        // ...
+        const allowedUrls = ['/join.html', '/two.html', '/login.html', '/aboutus.html', '/safezones.html'];
+        const currentUrl = window.location.pathname;
+
+        if (!allowedUrls.includes(currentUrl)) {
+            // Redirect to login page if not already there
+            window.location = "/login.html";
+        }
     }
 });
 
