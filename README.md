@@ -42,11 +42,11 @@ Technologies
     5.We plan to involve police officials to access a dashboard where they can monitor reported cases and bring justice.
 
 Contributors
-    1. KAITESI LISA (Project Manager)
+    1. KAITESI LISA (Project Manager, front end developer)
     2. LATIM RONNIE DAVID (Backend Developer)
     3. NANKYA FAIROUZ (Technical Writer)
     4. LUYIMA HAKIM(UI/UX Designer)
-    5. NICOLAS(Frontend Developer)
+   
 
 
 
