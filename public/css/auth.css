@@ -12,7 +12,7 @@
 
 .heading {
     font-family: 'Gobold', sans-serif;
-    font-size: 6vw;
+    font-size: 5.5vw;
     line-height: 1.2;
     text-align: center;
     color: #000000;
@@ -304,14 +304,33 @@ background-color: #d4d4d4;
         position: absolute;
         width: 200px;
         height: 10px;
-        left: 150px;
-        top: 500px;
+        left: 90px;
         text-align: center;
+        
     }
 
     .footer p {
         font-size: 15px;
+        
 
+    }
+    .line{
+        height: 1px;
+        width: 45%;
+        position: relative;
+        background-color: #d4d4d4;
+        
+}
+    .signin
+    {
+        margin-top: 100px;
+    }
+
+    .heading {
+
+        font-size: 11vw;
+        
+        
     }
 }
 /*
