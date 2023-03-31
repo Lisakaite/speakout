@@ -61,49 +61,79 @@
     <div class="row">
       <div class="col-lg-4">
 
-        <div >
-          <img src="img/beating.png" alt="beating">
-          <p><a href="reportnow.html">PHYSICAL VIOLENCE</a></p>
+        <div>
+          <label for="physicalviolence-input">
+            <a href="reportnow.html" id="physicalviolence-link" style="text-decoration: none; color: black;">
+              <img src="img/beating.png" alt="beating">
+              <p>PHYSICAL VIOLENCE</p>
+            </a>
+          </label>
+          <input type="text" style="display:none;" name="physicalviolence-input" id="physicalviolence-input" value="PHYSICAL VIOLENCE">
         </div>
 
       </div>
       <div class="col-lg-4">
 
         <div >
-          <a href="reportnow.html"><img src="img/exploit.png" alt="beating"></a>
-          <p><a href="reportnow.html">SEXUAL HARRASMENT</a></p>
+          <label for="sexualharrasment-input">
+            <a href="reportnow.html" id="sexualharrasment-link" style="text-decoration: none; color: black;">
+              <img src="img/exploit.png" alt="beating"></a>
+              <p>SEXUAL HARRASMENT</p>
+            </a>
+          </label>
+          <input type="text" style="display:none;" name="sexualharrasment-input" id="sexualharrasment-input" value="PHYSICAL VIOLENCE" >
         </div>
 
       </div>
       <div class="col-lg-4">
 
         <div >
-          <img src="img/fight.png" alt="beating">
-          <p><a href="reportnow.html">MOB JUSTICE</a></p>
+          <label for="mobjustice-input">
+            <a href="reportnow.html" id="mobjustice-link" style="text-decoration: none; color: black;">
+              <img src="img/fight.png" alt="beating">
+              <p>MOB JUSTICE</p>
+            </a>
+          </label>
+          <input type="text" style="display:none;" name="mobjustice-input" id="mobjustice-input" value="MOB JUSTICE" >
         </div>
 
       </div>
       <div class="col-lg-4">
 
         <div >
-          <img src="img/racism.png" alt="beating">
-          <p><a href="reportnow.html">DOMESTIC VIOLENCE</a></p>
+          <label for="domesticviolence-input">
+            <a href="reportnow.html" id="domesticviolence-link" style="text-decoration: none; color: black;">
+              <img src="img/racism.png" alt="beating">
+              <p>DOMESTIC VIOLENCE</p>
+            </a>
+          </label>
+          <input type="text" style="display:none;" name="domesticviolence-input" id="domesticviolence-input" value="DOMESTIC VIOLENCE" >
         </div>
 
       </div>
       <div class="col-lg-4">
 
         <div >
-          <img src="img/man 1.png" alt="beating">
-          <p><a href="reportnow.html">GENDER-BASED VIOLENCE</a></p>
+          <label for="genderbasedviolence-input">
+            <a href="reportnow.html" id="genderbasedviolence-link" style="text-decoration: none; color: black;">
+              <img src="img/man 1.png" alt="beating">
+              <p>GENDER-BASED VIOLENCE</p>
+            </a>
+          </label>
+          <input type="text" style="display:none;" name="genderbasedviolence-input" id="genderbasedviolence-input" value="GENDER-BASED VIOLENCE" >
         </div>
         
       </div>
       <div class="col-lg-4">
 
         <div >
-          <img src="img/beating.png" alt="beating">
-          <p><a href="reportnow.html">ANY OTHER FORM</a></p>
+          <label for="anyotherform-input">
+            <a href="reportnow.html" id="anyotherform-link" style="text-decoration: none; color: black;">
+              <img src="img/beating.png" alt="beating">
+              <p>ANY OTHER FORM</p>
+            </a>
+          </label>
+          <input type="text" style="display:none;" name="anyotherform-input" id="anyotherform-input" value="ANY OTHER FORM" >
         </div>
         
       </div>
@@ -122,6 +152,67 @@
 
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+  <script>
+    const pvlink = document.getElementById('physicalviolence-link');
+    const pvinput = document.getElementById('physicalviolence-input');
+
+    pvlink.addEventListener('click', () => {
+      localStorage.setItem('physicalviolence', pvinput.value);
+      // alert("successpv");
+    });
+  </script>
+
+  <script>
+    const shlink = document.getElementById('sexualharrasment-link');
+    const shinput = document.getElementById('sexualharrasment-input');
+
+    shlink.addEventListener('click', () => {
+      localStorage.setItem('sexualharrasment', shinput.value);
+      // alert('successsh');
+    });
+  </script>
+
+  <script>
+    const mjlink = document.getElementById('mobjustice-link');
+    const mjinput = document.getElementById('mobjustice-input');
+
+    mjlink.addEventListener('click', () => {
+      localStorage.setItem('mobjustice', mjinput.value);
+      // alert('successmj');
+    });
+  </script>
+
+  <script>
+    const dvlink = document.getElementById('domesticviolence-link');
+    const dvinput = document.getElementById('domesticviolence-input');
+
+    dvlink.addEventListener('click', () => {
+      localStorage.setItem('domesticviolence', dvinput.value);
+      // alert('successdv');
+    });
+  </script>
+
+  <script>
+    const gbvlink = document.getElementById('genderbasedviolence-link');
+    const gbvinput = document.getElementById('genderbasedviolence-input');
+
+    gbvlink.addEventListener('click', () => {
+      localStorage.setItem('genderbasedviolence', gbvinput.value);
+      // alert('successgbv');
+    });
+  </script>
+
+  <script>
+    const aoflink = document.getElementById('anyotherform-link');
+    const aofinput = document.getElementById('anyotherform-input');
+
+    aoflink.addEventListener('click', () => {
+      localStorage.setItem('anyotherform', aofinput.value);
+      // alert('successaof');
+    });
+  </script>
+  <script type="module" src="/js/backend/auth.js"></script>
+
 </html>
