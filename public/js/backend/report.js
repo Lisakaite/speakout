@@ -1,10 +1,11 @@
 import { app } from "./config.js";
 import { getFirestore, collection, doc, setDoc, updateDoc, addDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
-import { getStorage, ref, uploadBytesResumable, getDownloadURL} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js";
-
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
 const db = getFirestore(app);
 const storage = getStorage(app);
+const auth = getAuth();
 
 const fileInput = document.getElementById('file-upload');
 if (fileInput) {
@@ -63,23 +64,32 @@ const uploadFile = (files) => {
       // handle download URL of uploaded file
         console.log(`Download URL: ${downloadURL}`);
 
-      // save the data to Firestore
-      const reportsCollection = collection(db, 'Reports');
-        addDoc(reportsCollection, {
-        category: category,
-        fileURL: downloadURL
-        })
-      .then(() => {
-          console.log('Report added successfully!');
-          alert('Report added successfully!');
-          localStorage.clear();
-          window.location = "/indexauthed.html";
-      })
-      .catch((error) => {
-          console.error(error);
-            alert('Error adding report!');
-          localStorage.clear();
-          window.location = "/indexauthed.html";
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // save the data to Firestore
+          const reportsCollection = collection(db, 'Reports');
+          addDoc(reportsCollection, {
+            uploadedby: user.email,
+            category: category,
+            fileURL: downloadURL,
+            timestamp: new Date().toString()
+          })
+            .then(() => {
+              console.log('Report added successfully!');
+              alert('Report added successfully!');
+              localStorage.clear();
+              window.location = "/indexauthed.html";
+            })
+            .catch((error) => {
+              console.error(error);
+              alert('Error adding report!');
+              localStorage.clear();
+              window.location = "/indexauthed.html";
+            });
+        } else {
+          // redirect to login page
+          window.location = "/index.html";
+        }
       });
     });
   });
