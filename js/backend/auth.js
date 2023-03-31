@@ -150,7 +150,7 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
         // User is signed in
         const uid = user.uid;
-        const allowedUrls = ['/indexauthed.html', '/category.html', '/reportnow.html'];
+        const allowedUrls = ['/indexauthed.html', '/category.html', '/reportnow.html', '/aboutus.html', '/safezones.html'];
         const currentUrl = window.location.pathname;
 
         if (!allowedUrls.includes(currentUrl)) {
@@ -159,12 +159,12 @@ onAuthStateChanged(auth, (user) => {
         }
     } else {
         // User is signed out
-        const allowedUrls = ['/join.html', '/two.html', '/login.html', '/aboutus.html', '/safezones.html'];
+        const allowedUrls = ['/join.html', '/two.html', '/login.html', '/aboutus.html', '/safezones.html', '/index.html', '/jointhemovt.html', '/twostepper.html'];
         const currentUrl = window.location.pathname;
 
         if (!allowedUrls.includes(currentUrl)) {
             // Redirect to login page if not already there
-            window.location = "/login.html";
+            window.location = "/index.html";
         }
     }
 });
