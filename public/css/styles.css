@@ -433,3 +433,21 @@ body {
   
     }
 }
+
+
+/**styles for profilepage**/
+
+.col-md-9 h3{
+font-family: 'Gobold' , sans-serif;
+
+}
+
+.col-md-9 .row
+{
+  margin-top: 50px;
+}
+.col-md-3 img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}

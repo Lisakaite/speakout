@@ -44,7 +44,7 @@ const uploadFile = (files) => {
       
   }
   
-  const storageRef = ref(storage, files[0].name);
+  const storageRef = ref(storage, `Reported Cases/${category}/${files[0].name}`);
 //   const fileRef = child(storageRef, files[0].name);
     const uploadTask = uploadBytesResumable(storageRef, files[0]);
   
