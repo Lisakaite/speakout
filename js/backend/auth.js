@@ -150,7 +150,7 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
         // User is signed in
         const uid = user.uid;
-        const allowedUrls = ['/indexauthed.html', '/category.html', '/reportnow.html', '/aboutusauthed.html', '/safezonesauthed.html'];
+        const allowedUrls = ['/indexauthed.html', '/category.html', '/reportnow.html', '/aboutusauthed.html', '/safezonesauthed.html', '/profile.html'];
         const currentUrl = window.location.pathname;
 
         if (!allowedUrls.includes(currentUrl)) {
