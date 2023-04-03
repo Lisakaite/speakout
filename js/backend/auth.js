@@ -92,10 +92,7 @@ getRedirectResult(auth)
             setDoc(doc(db, 'Users', result.user.uid), {
                 name: result.user.displayName,
                 email: result.user.email,
-                photoURL: result.user.photoURL
-            });
-
-            updateDoc(doc(db, 'Users', result.user.uid), {
+                photoURL: result.user.photoURL,
                 last_login: new Date().toString()
             })
                 .then(() => {
@@ -162,7 +159,7 @@ onAuthStateChanged(auth, async (user) => {
 
     if (!allowedUrls.includes(currentUrl)) {
       // Redirect to authed page if not already there
-      window.location = '/indexauthed.html';
+        //   window.location = '/indexauthed.html';
     } else {
       // Update profile information
       const profileImg = document.querySelector('.col-md-3 img');
@@ -270,24 +267,22 @@ onAuthStateChanged(auth, async (user) => {
     }
     } else {
         // User is signed out
-        const allowedUrls = [
-        '/login.html',
-        '/aboutus.html',
-        '/safezones.html',
-        '/index.html',
-        '/jointhemovt.html',
-        '/twostepper.html',
-        ];
-        const currentUrl = window.location.pathname;
+        // const allowedUrls = [
+        // '/login.html',
+        // '/aboutus.html',
+        // '/safezones.html',
+        // '/index.html',
+        // '/jointhemovt.html',
+        // '/twostepper.html',
+        // ];
+        // const currentUrl = window.location.pathname;
 
-        if (!allowedUrls.includes(currentUrl)) {
-        // Redirect to login page if not already there
-        window.location = '/index.html';
-        }
+        // if (!allowedUrls.includes(currentUrl)) {
+        // // Redirect to login page if not already there
+        // window.location = '/index.html';
+        // }
     }
 });
-
-
 
 
 const logout = document.getElementById('logout');
