@@ -1,5 +1,5 @@
 import { app } from "./config.js";
-import { getFirestore, collection, doc, setDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+import { getFirestore, collection, doc, setDoc, updateDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, signInWithPopup, signInWithRedirect, getRedirectResult, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
 const db = getFirestore(app);
@@ -156,6 +156,24 @@ onAuthStateChanged(auth, (user) => {
         if (!allowedUrls.includes(currentUrl)) {
             // Redirect to authed page if not already there
             window.location = "/indexauthed.html";
+        } else {
+            // Update profile information
+            const profileImg = document.querySelector('.col-md-3 img');
+            const profileName = document.querySelector('.col-md-9 h3');
+            
+            // Get user information from Firebase Auth
+            // const db = getFirestore();
+            const userRef = doc(db, "Users", uid);
+            getDoc(userRef).then((doc) => {
+                if (doc.exists()) {
+                    const userData = doc.data();
+                    // Update profile image and name
+                    profileImg.src = userData.photoURL || "/img/avatar.png";
+                    profileName.textContent = userData.name || "Anonymous";
+                }
+            }).catch((error) => {
+                console.log("Error getting user document:", error);
+            });
         }
     } else {
         // User is signed out
